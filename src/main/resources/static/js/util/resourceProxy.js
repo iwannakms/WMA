@@ -2,7 +2,7 @@ define(function() {
     var ajax = webix.ajax().headers({
         'Content-type': 'application/json'
     })
-
+    
     webix.proxy.resource = {
         init: function() {
             webix.extend(this, webix.proxy.rest)

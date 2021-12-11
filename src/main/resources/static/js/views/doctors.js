@@ -1,5 +1,6 @@
 define(function() {
     return {
+
         rows: [
             {
                 view: 'toolbar',
@@ -8,37 +9,30 @@ define(function() {
                         view: 'button',
                         label: 'Add',
                         click: function() {
-                            var markList = $$('markList')
-                            var id = markList.add({})
-                            markList.editRow(id)
+                            var doctorList = $$('doctorList')
+                            var id = doctorList.add({})
+                            doctorList.editRow(id)
                         }
                     }
                 ]
             },
             {
-                id: 'markList',
+                id: 'doctorList',
                 view: "datatable",
                 columns: [
-                    { id: "firstname", editor: "text" },
-                    { id: "lastname", editor: "text" },
-                    { id: "date_of_birthday", editor: "text" },
-                    { id: "height", editor: "text" },
-                    { id: "width", editor: "text" },
-                    { id: "rhesus_factor", editor: "text" },
-                    { id: "blood_type", editor: "text" }
-
+                    { id: "name", editor: "text" }
 
                 ],
-                url: 'resource->/api/mark',
-                save: 'resource->/api/mark',
+                url: 'resource->/api/doctor',
+                save: 'resource->/api/doctor',
                 autoheight: true,
                 autowidth: true,
                 editable: true,
-                pager: "markPager"
+                pager: "doctorPager"
             },
             {
                 view: "pager",
-                id: "markPager",
+                id: "doctorPager",
                 size:3,
                 group:3,
                 template: "{common.first()}{common.prev()}{common.pages()}{common.next()}{common.last()}"

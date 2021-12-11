@@ -1,13 +1,14 @@
 define(function() {
     return {
+
         type: "line",
-        height: 400,
+        height: 500,
         rows: [
             {
                 view: 'button',
-                label: 'Cars',
+                label: '',
                 click: function() {
-                    routie('cars')
+                    routie('')
                 }
             },
             { template: "Row 1" },
