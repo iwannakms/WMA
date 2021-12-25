@@ -27,7 +27,15 @@ define(function() {
                 save: 'resource->/api/nurse',
                 autoheight: true,
                 autowidth: true,
-                editable: true
+                editable: true,
+                pager: "markPager"
+            },
+            {
+                view: "pager",
+                id: "markPager",
+                size:3,
+                group:3,
+                template: "{common.first()}{common.prev()}{common.pages()}{common.next()}{common.last()}"
             }
         ]
     }

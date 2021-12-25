@@ -20,7 +20,9 @@ define(function() {
                 id: 'doctorList',
                 view: "datatable",
                 columns: [
-                    { id: "name", editor: "text" }
+                    { id: "name", editor: "text" },
+                    { id: "spec ", editor: "text" },
+                    { id: "salary", editor: "text" },
 
                 ],
                 url: 'resource->/api/doctor',
@@ -33,7 +35,7 @@ define(function() {
             {
                 view: "pager",
                 id: "doctorPager",
-                size:3,
+                size:10,
                 group:3,
                 template: "{common.first()}{common.prev()}{common.pages()}{common.next()}{common.last()}"
             }

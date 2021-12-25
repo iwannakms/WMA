@@ -39,8 +39,8 @@ define(function() {
             {
                 view: "pager",
                 id: "markPager",
-                size:3,
-                group:3,
+                size:5,
+                group:5,
                 template: "{common.first()}{common.prev()}{common.pages()}{common.next()}{common.last()}"
             }
         ]
