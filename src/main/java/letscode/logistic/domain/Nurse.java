@@ -15,4 +15,9 @@ public class Nurse {
     private Long id;
 
     private String name;
+    private String age;
+    private String salary_of_nurse;
+
+    private String procedures;
+    private String done_procedures;
 }

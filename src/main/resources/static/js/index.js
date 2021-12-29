@@ -27,37 +27,36 @@ function buildButton(label, route) {
 }
 
 require(
-    ['views/main', 'views/cars', 'views/marks','views/doctors','views/nurses', 'util/resourceProxy'],
-    function(main, cars, marks, doctors,nurses, resourceProxy) {
-    webix.ready(function() {
-        webix.ui({
-            container: 'app',
-            width: document.body.clientWidth,
-            height: document.body.clientHeight,
-            rows: [
-                {
-                    view: 'toolbar',
-                    cols: [
-                        buildButton('Home', ''),
-                        buildButton('Patients', 'marks'),
-                        buildButton('Doctors', 'doctors'),
-                        buildButton('Nurses', 'nurses'),
+    ['views/main', 'views/patientInfo', 'views/marks','views/doctors','views/nurses', 'util/resourceProxy'],
+    function(main,patientInfo, patients, doctors,nurses, resourceProxy) {
+        webix.ready(function() {
+            webix.ui({
+                container: 'app',
+                width: document.body.clientWidth,
+                height: document.body.clientHeight,
+                rows: [
+                    {
+                        view: 'toolbar',
+                        cols: [
+                            buildButton('Home', ''),
+                            buildButton('Patients', 'patients'),
+                            buildButton('Doctors', 'doctors'),
+                            buildButton('Nurses', 'nurses'),
+                        ]
+                    },
+                    {
+                        id: 'root'
+                    }
+                ]
+            })
+        })
 
-
-                    ]
-                },
-                {
-                    id: 'root'
-                }
-            ]
+        routie({
+            '': buildRoute(main),
+            'patientInfo': buildRoute(patientInfo),
+            'patients': buildRoute(patients),
+            'nurses': buildRoute(nurses),
+            'doctors': buildRoute(doctors),
         })
     })
 
-    routie({
-        '': buildRoute(main),
-        'cars': buildRoute(cars),
-        'marks': buildRoute(marks),
-        'nurses': buildRoute(nurses),
-        'doctors': buildRoute(doctors),
-    })
-})

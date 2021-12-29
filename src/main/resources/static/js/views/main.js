@@ -6,19 +6,13 @@ define(function() {
         rows: [
             {
                 view: 'button',
-                label: '',
+                label: 'Show history of illness',
                 click: function() {
-                    routie('')
+                    routie('patientInfo')
                 }
             },
-            { template: "Row 1" },
-            { template: "Row 2" },
-            {
-                cols: [
-                    { template: "col 1" },
-                    { template: "col 2" }
-                ]
-            }
+            { template: "<img src=\"https://i.ibb.co/H72QR0P/Web-Med-Ain.gif\"style=\"margin-left: 550px; width=\"450\" height=\"350\" alt=\"\">" },
+
         ]
     }
 })

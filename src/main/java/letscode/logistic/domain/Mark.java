@@ -22,4 +22,5 @@ public class Mark {
     private double width;
     private String rhesus_factor;
     private int blood_type;
+    private String diagnosis;
 }
