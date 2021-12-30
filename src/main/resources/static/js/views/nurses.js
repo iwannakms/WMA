@@ -20,7 +20,7 @@ define(function() {
                 id: 'nurseList',
                 view: "datatable",
                 columns: [
-                    { id: "name", editor: "text", header: "Name" },
+                    { id: "name", width: 150, editor: "text", header: "Name" },
                     { id: "age", editor: "text", header: "Age"  },
                     { id: "salary_of_nurse", editor: "text", header: "Salary"  }
 
@@ -48,7 +48,7 @@ define(function() {
                 id: 'nurseList',
                 view: "datatable",
                 columns: [
-                    { id: "name", editor: "text", header: "Name" },
+                    { id: "name", width: 150, editor: "text", header: "Name" },
                     { id: "procedures",width: 800, editor: "text", header: "Procedures"  },
                     { id: "done_procedures",width: 150, editor: "text", header: "Done procedures"  }
 

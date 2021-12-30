@@ -20,7 +20,7 @@ define(function() {
                 id: 'doctorList',
                 view: "datatable",
                 columns: [
-                    { id: "name", editor: "text", header: "Name" },
+                    { id: "name", width: 150, editor: "text", header: "Name" },
                     { id: "age", editor: "text", header: "Age" },
                     { id: "specialization", width: 150, editor: "text", header: "Specialization" },
                     { id: "salary", editor: "text", header: "Salary" },
